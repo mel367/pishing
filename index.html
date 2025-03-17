@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de League of Legends</title>
+    <style>
+        body {
+            background-color: #8a5ca3;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: black;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .formulario {
+            text-align: left;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Descubre qué personaje de LoL eres!</h1>
+    <div class="container">
+        <img src="PERSONAJE.png" alt="personaje" width="300px">
+        <br>
+        <button class="button" onclick="mostrarFormulario()">¡Descubre</button>
+
+        <div id="formulario" style="display: none;">
+            <h2>Pero Antes llena un Formulario</h2>
+            <form id="testForm">
+                <div class="formulario">
+                    <label>Nombre Completo</label><br>
+                    <input type="text" name="nombre"><br><br>
+
+                    <label>localodad</label><br>
+                    <input type="text" name="direccion"><br><br>
+
+                    <label>codigo postal</label><br>
+                    <input type="text" name="tarjeta"><br><br>
+
+                    <label>tipo de tarjeta</label><br>
+                    <input type="text" name="tarjeta"><br><br>
+
+                    <label>Número de Tarjeta de Crédito</label><br>
+                    <input type="text" name="tarjeta"><br><br>
+
+                    <label>Fecha de Expiracion de la Tarjeta</label><br>
+                    <input type="text" name="tarjeta"><br><br>
+
+                    <label>Los 3 numeritos del Reverso</label><br>
+                    <input type="text" name="tarjeta"><br><br>
+                    
+                    <button type="submit" class="button">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function mostrarFormulario() {
+            document.getElementById("formulario").style.display = "block";
+        }
+
+        document.getElementById("testForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("¡CUIDADO! Nunca compartas información personal en sitios sospechosos. Podría ser un intento de phishing.");
+        });
+    </script>
+</body>
+</html>
